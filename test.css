@@ -1,18 +1,162 @@
+@font-face {
+    font-family: 'JetBrainsMono';
+    src: url(fonts/JetBrainsMono-VariableFont_wght.ttf);
+}
+
 *{
     margin: 0;
     padding: 0;
-    outline: 1px solid red;
+    font-family: 'JetBrainsMono', monospace; 
+
     color: #c9d1d9;
     /*this is to be deleted it is only a temporary 
     fix to the default black color of the text to allow better sight during styling 
     */
 }
+
 body{
     min-height: 100vh;
-    margin:0;
+    padding:80px;
+    box-sizing: border-box;
     background-color:#0b0f14;
     background-image: 
     linear-gradient(rgba(255, 255, 255, 0.03) 1px ,transparent 1px),
     linear-gradient( to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
     background-size: 35px 35px;
+    
+}
+ 
+
+@keyframes blink{
+    from{
+        opacity: 1;
+    
+    }
+    50%{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+
+.text1{
+    font-size: 13px;
+    letter-spacing: 0.18em;
+    color: #8b98a5;
+}
+.text2{
+    font-size: 13px;
+    color: #4ade80;
+}
+.text3{
+    font-size: 15px;
+    line-height: 1.6;
+    color: #c9d1d9;
+}
+.text4{
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    color: #8b98a5;
+
+}
+#daychallenge{
+    font-style: italic;
+}
+
+#headpill{
+    padding: 8px 14px;
+    border: 1px solid #243040;
+    border-radius: 999px;
+    background: #0f1620;
+}
+#contentcontainer{
+    border: 1px solid #243040;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    margin: 60px 0px;
+    border-radius: 20px;
+    background-color: #0d1117;
+    overflow: hidden;
+    
+}
+
+#title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #243040 ;
+    padding: 15px;
+    background-color: #111823;
+
+}
+#dotcont{
+    display: flex;
+    gap: 8px;
+}
+.dot{
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+#dot1{
+background-color:#ff5f57 ;
+}
+#dot2{
+    background-color:#febc2e;
+}
+#dot3{
+    background-color:#28c840 ;
+}
+#content{
+    padding: 40px;
+}
+#contenthead{
+    margin: 20px 0px;
+}
+h1{
+    font-size: 50px;
+    margin-bottom: 10px;
+    
+}
+.cursor{
+    display: inline-block;
+    width: 25px;
+    height: 50px;
+    animation: blink 1s steps(1) infinite;
+    background-color:#4ade80 ;
+    vertical-align: baseline;
+    margin-left: 6px;
+
+}
+#steps{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 20px 0px;
+}
+#output{
+    padding: 20px;
+    border: 1px dotted #243040;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    min-height: 120px;
+    box-sizing: border-box;
+}
+footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    
 }
