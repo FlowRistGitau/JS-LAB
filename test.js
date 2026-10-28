@@ -9,3 +9,11 @@ function printLine(result){
     outputLines.appendChild(outputText);
     placeHolder.classList.add('hidden');
 }
+
+function logToPage(...args){
+    const text = args.map(String).join(" ");
+    printLine(text);
+    originalLog(...args);
+
+}
+console.log=logToPage;
