@@ -1,7 +1,11 @@
-let fruit = prompt("which fruit do you want to buy?","mango");
-let bag={
-    [fruit]:5,
-};
+const outputLines= document.getElementById('output-lines');
+const placeHolder= document.getElementById('output-placeholder');
+const originalLog= console.log;
 
-alert(bag.mango);
-
+function printLine(result){
+    const outputText=document.createElement('p');
+    outputText.textContent=result;
+    outputText.classList.add('output-line');
+    outputLines.appendChild(outputText);
+    placeHolder.classList.add('hidden');
+}
